@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/luisc8487/e-commerce-app/issues"
   },
-  "homepage": "https://github.com/luisc8487/e-commerce-app#readme"
+  "homepage": "https://github.com/luisc8487/e-commerce-app#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
+  }
 }
