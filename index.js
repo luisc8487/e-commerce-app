@@ -5,14 +5,19 @@ const app = express();
 app.get("/", (req, res) => {
   res.send(`
     <div>
-        <form>
-            <input placeholder="email"/>
-            <input placeholder="password"/>
-            <input placeholder="password confirmation"/>
+        <form method="POST">
+            <input name="email" placeholder="email"/>
+            <input name="password" placeholder="password"/>
+            <input name="passwordConfirmation" placeholder="password confirmation"/>
             <button>Submit</button/>
         </form>
     </div>
     `);
+});
+
+app.post("/", (req, res) => {
+    // get the data from the form
+    res.send("Thanks for signing up!");
 });
 
 app.listen(3000, () => {
