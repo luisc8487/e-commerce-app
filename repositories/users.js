@@ -1,4 +1,6 @@
+// modules that provide access to the file system such as reading, writing and deleting files and directories
 const fs = require("fs");
+// crypto module provides cryptographic functions
 const crypto = require("crypto");
 
 class UsersRepository {
