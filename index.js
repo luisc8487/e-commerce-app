@@ -33,6 +33,7 @@ app.post("/", async (req, res) => {
   }
 
   // Create the user in our user repo to represent this person
+  const user = await usersRepo.create({email, password});
 
   // Store the id of that user inside the users cookie
 

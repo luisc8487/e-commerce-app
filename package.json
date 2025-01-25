@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/luisc8487/e-commerce-app#readme",
   "dependencies": {
+    "cookie-session": "^2.1.0",
     "express": "^4.21.2",
     "nodemon": "^3.1.9"
   }
