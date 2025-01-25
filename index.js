@@ -28,9 +28,13 @@ app.post("/", async (req, res) => {
     return res.send("Email in use");
   }
 
-  if(password !== passwordConfirmation) {
+  if (password !== passwordConfirmation) {
     return res.send("Passwords must match");
   }
+
+  // Create the user in our user repo to represent this person
+
+  // Store the id of that user inside the users cookie
 
   res.send("Thanks for signing up!");
 });
