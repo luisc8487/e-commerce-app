@@ -5,3 +5,4 @@
 - express js
 - cookie session
 - nodemon
+- express validators
