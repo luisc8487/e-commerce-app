@@ -9,6 +9,7 @@ const {
   requirePassword,
   requirePasswordConfirmation,
 } = require("./validators");
+const e = require("express");
 
 const router = express.Router();
 
@@ -21,15 +22,12 @@ router.post(
   [requireEmail, requirePassword, requirePasswordConfirmation],
   async (req, res) => {
     const errors = validationResult(req);
-    console.log(errors);
 
-    const {email, password, passwordConfirmation} = req.body;
-
-    if (password !== passwordConfirmation) {
-      return res.send("Passwords must match");
+    if (!errors.isEmpty()) {
+      return res.send(signupTemplate({req, errors}));
     }
 
-    // Create the user in our user repo to represent this person
+    const {email, password, passwordConfirmation} = req.body;
     const user = await usersRepo.create({email, password});
 
     // Store the id of that user inside the users cookie
