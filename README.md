@@ -5,4 +5,4 @@
 - express js
 - cookie session
 - nodemon
-- express validators
+- multer middleware for handling multipart/form-data - primarily used for uploading files
