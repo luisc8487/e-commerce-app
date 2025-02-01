@@ -44,11 +44,32 @@ router.get("/admin/products/:id/edit", requireAuth, async (req, res) => {
   if (!product) {
     return res.send("Prduct not found");
   }
-  res.send(productsNewTemplate({product}));
+  res.send(productsEditTemplate({product}));
 });
 
-router.post("/admin/products/:id/edit", requireAuth, async (req, res) => {
-  
-});
+router.post(
+  "/admin/products/:id/edit",
+  requireAuth,
+  upload.single("image"),
+  [requireTitle, requirePrice],
+  handleErrors(productsEditTemplate, async (req, res) => {
+    const product = await ProductsRepo.getOne(req.params.id);
+    return {product};
+  }),
+  async (req, res) => {
+    const changes = req.body;
+
+    if (req.file) {
+      changes.image = req.file.buffer.toString("base64");
+    }
+    try {
+      await ProductsRepo.update(req.params.id, changes);
+    } catch (err) {
+      return res.send("Could not find item");
+    }
+
+    res.redirect("/admin/products");
+  }
+);
 
 module.exports = router;
