@@ -29,7 +29,7 @@ router.post(
     const {title, price} = req.body;
     await ProductsRepo.create({title, price, image});
 
-    res.send("Saving the product");
+    res.redirect('/admin/products');
   }
 );
 
