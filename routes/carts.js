@@ -50,7 +50,7 @@ router.get("/cart", async (req, res) => {
 
 router.post("/cart/products/delete", async (req, res) => {
   const {itemId} = req.body;
-  const cart = await CartsRepo.getOne(req.body.itemId);
+  const cart = await CartsRepo.getOne(req.session.cartId);
 
   const items = cart.items.filter((item) => item.id !== itemId);
 
