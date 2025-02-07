@@ -1,6 +1,7 @@
-# e-commerce-app
+# E-Commerce Web Application
 
-## Dependenices
+### Overview
+
 - express validator
 - express js
 - cookie session
