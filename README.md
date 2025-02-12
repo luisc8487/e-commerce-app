@@ -17,9 +17,10 @@ Instead of using a database, I used multiple **JSON file** to store:
 
 ## Authentication & User Privileges
 To ensure security and proper user-specific access: 
-- Implemented Cookies Session to track logged-in users.
+- Implemented **Cookies Session** to track logged-in users.
 - Verified the session every time a user accessed a new route or endpoint.
-- Assigned a userId property to logged-in users, allowing them to:
+- Assigned a **userId property** to logged-in users, allowing them to:
     - Access their admin account.
     - View their created products, including quantity and total amount.
 
+## Project Structure
