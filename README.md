@@ -1,7 +1,7 @@
 # E-Commerce Web Application
 
 ## Overview
-I created an e-commerce web application using JavaScript, Node.js, Express.js, Cookie Session, Nodemon, Multer and Express Validator.
+I created an e-commerce web application using **JavaScript, Node.js, Express.js, Cookie Session, Nodemon, Multer and Express Validator**.
 
 ## Project Purpose
 The goal of this project was a to build a front-end web application that allows users to "fake shop" for about 10 smaple items. Key features include:  
