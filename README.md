@@ -9,9 +9,9 @@ The goal of this project was a to build a front-end web application that allows 
 - Signed-in users have their cart data associated with a **cart ID**, linking different products through a **product ID**
 - Users can create new products with a **title, price, and image**.
 
+## Data Storage
+Instead of using a database, I used multiple **JSON file** to store:
+- **User Data**
+- **Item Data**
+- **Cart Data**
 
-- express validator
-- express js
-- cookie session
-- nodemon
-- multer middleware for handling multipart/form-data - primarily used for uploading files
