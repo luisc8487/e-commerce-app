@@ -24,3 +24,58 @@ To ensure security and proper user-specific access:
     - View their created products, including quantity and total amount.
 
 ## Project Structure
+To maintain a well-organized codebased, I structured the project repository by separating concerns into:
+
+- **Routes**
+- **Middleware**
+- **Data Handling**
+- **Static Assets**
+
+### Repository File Structure
+
+```
+E-Commerce-App/
+|-- node_modules/
+|-- public/
+|   |-- css/
+|       |-- main.css
+|   |-- images/
+|       |-- banner.jpg
+|-- repositories/
+|   |-- carts.js
+|   |-- products.js
+|   |-- repository.js
+|   |-- users.js
+|-- routes/
+|   |-- admin/
+|       |-- auth.js
+|       |-- middlewares.js
+|       |-- products.js
+|       |-- validators.js
+|   |-- carts.js
+|   |-- products.js
+|-- views/
+|   |-- admin/
+|       |-- auth/
+|           |-- signin.js
+|           |-- signup.js
+|       |-- products/
+|           |-- edit.js
+|           |-- index.js
+|           |-- new.js
+|       |-- layout.js
+|   |-- carts/
+|       |-- show.js
+|   |-- products/
+|       |-- index.js
+|   |-- helpers.js
+|   |-- layout.js
+|-- carts.json
+|-- index.js
+|-- LICEENSE
+|-- package-lock.json
+|-- package.json
+|-- products.json
+|-- README.md
+|-- users.json
+```
