@@ -89,3 +89,7 @@ E-Commerce-App/
 - **Multer**
 - **Express Validator**
 
+## Future Improvements
+- Implement a proper **database** (e.g. MongoDB or PostgreSQL) instead of JSON files.
+- Improve **authentication** and add password hashing.
+- Expand product catalog and enhance the shopping experience.
