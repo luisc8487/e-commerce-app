@@ -79,3 +79,13 @@ E-Commerce-App/
 |-- README.md
 |-- users.json
 ```
+
+## Technologies Used
+- **JavaScript**
+- **Node.js**
+- **Express.js**
+- **Cookie Session**
+- **Nodemon**
+- **Multer**
+- **Express Validator**
+
